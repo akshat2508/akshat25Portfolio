@@ -1,0 +1,281 @@
+/* section background */
+
+.cert-section{
+background:var(--parchment);
+}
+
+/* scroll container */
+
+.cert-scroll{
+height:160vh;
+position:relative;
+}
+
+/* sticky stage */
+
+.cert-stage{
+position:sticky;
+top:0;
+height:100vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+/* container */
+
+.cert-container{
+max-width:1200px;
+margin:auto;
+width:100%;
+padding:0 40px;
+}
+
+/* header */
+
+.cert-header{
+margin-bottom:60px;
+}
+
+/* tag (same as hero pill style but lighter) */
+
+.cert-tag{
+
+font-family:var(--font-mono);
+
+font-size:11px;
+
+letter-spacing:0.12em;
+
+color:var(--sage);
+
+display:block;
+
+margin-bottom:18px;
+
+}
+
+/* title */
+
+.cert-title{
+
+font-family:var(--font-display);
+
+font-size:64px;
+
+font-weight:800;
+
+letter-spacing:-0.02em;
+
+line-height:1;
+
+margin-bottom:20px;
+
+}
+
+/* description */
+
+.cert-desc{
+
+font-size:17px;
+
+color:var(--ink-70);
+
+max-width:540px;
+
+line-height:1.6;
+
+}
+
+/* certificate grid */
+
+.cert-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:28px;
+
+margin-top:60px;
+
+}
+
+/* certificate card */
+
+.cert-card{
+
+background:white;
+
+border-radius:16px;
+
+overflow:hidden;
+
+border:1px solid var(--border);
+
+cursor:pointer;
+
+transition:all 0.25s ease;
+
+}
+
+.cert-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.08);
+
+}
+
+/* preview image */
+
+.cert-card img{
+
+width:100%;
+
+height:160px;
+
+object-fit:cover;
+
+}
+
+/* card content */
+
+.cert-info{
+
+padding:18px 20px;
+
+}
+
+/* certificate title */
+
+.cert-info h3{
+
+font-family:var(--font-display);
+
+font-size:20px;
+
+font-weight:700;
+
+margin-bottom:6px;
+
+}
+
+/* issuer */
+
+.cert-info p{
+
+font-size:13px;
+
+font-family:var(--font-mono);
+
+color:var(--ink-50);
+
+letter-spacing:0.05em;
+
+}
+
+/* modal background */
+
+.cert-modal{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.6);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+z-index:100;
+
+}
+
+/* modal card */
+
+.cert-modal-content{
+
+background:white;
+
+border-radius:20px;
+
+padding:40px;
+
+max-width:720px;
+
+width:90%;
+
+box-shadow:0 30px 100px rgba(0,0,0,0.25);
+
+text-align:center;
+
+}
+
+/* preview image */
+
+.cert-modal-content img{
+
+width:100%;
+
+border-radius:12px;
+
+margin-bottom:20px;
+
+}
+
+/* title */
+
+.cert-modal-content h2{
+
+font-family:var(--font-display);
+
+font-size:32px;
+
+font-weight:800;
+
+margin-bottom:10px;
+
+}
+
+/* issuer */
+
+.cert-modal-content p{
+
+font-family:var(--font-mono);
+
+font-size:13px;
+
+color:var(--ink-60);
+
+margin-bottom:20px;
+
+}
+
+/* button */
+
+.cert-modal-content a{
+
+display:inline-block;
+
+background:var(--sage);
+
+color:white;
+
+padding:14px 26px;
+
+border-radius:10px;
+
+font-weight:600;
+
+text-decoration:none;
+
+}

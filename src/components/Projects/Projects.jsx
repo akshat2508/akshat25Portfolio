@@ -5,30 +5,39 @@ import "./Projects.css"
 const projects = [
 {
 title:"Docuvio",
-desc:"Campus printing marketplace connecting students with print shops.",
+desc:"Campus printing marketplace connecting students with local print shops for fast document printing and order tracking.",
 tech:["React","Supabase","Flask"],
-image:"/projects/docuvio.png"
+image:"/projects/docuvio.png",
+github:"https://github.com/yourusername/docuvio",
+live:"https://docuvio.com"
 },
+
 {
-title:"Banker's Algorithm Simulator",
-desc:"Deadlock avoidance simulator with resource allocation graphs.",
-tech:["C++","Algorithms","OS"],
-image:"/projects/bankers.png"
+title:"Pi Pascals LMS",
+desc:"Learning management system for managing courses, assignments and student submissions with real-time dashboards.",
+tech:["React","Node","Supabase"],
+image:"/projects/pipascals.png",
+github:"https://github.com/yourusername/pi-pascals-lms",
+live:"https://pipascals.com"
 },
+
 {
-title:"Resume Screening AI",
-desc:"Machine learning system that ranks resumes vs job descriptions.",
-tech:["Python","Flask","ML"],
-image:"/projects/resume.png"
+title:"AnonTalk",
+desc:"Anonymous real-time chat platform where users can communicate without accounts using temporary identities.",
+tech:["React","WebSockets","Node"],
+image:"/projects/anontalk.png",
+github:"https://github.com/yourusername/anontalk",
+live:"https://anontalk.app"
 },
+
 {
-title:"Deadlock Detection Toolkit",
-desc:"Interactive OS visualization for wait-for graphs and deadlock recovery.",
-tech:["Python","PyQt"],
-image:"/projects/deadlock.png"
+title:"MyGit",
+desc:"A lightweight local version control system inspired by Git, built to understand internal VCS mechanics and commit trees.",
+tech:["C++","CLI","Systems"],
+image:"/projects/localgit.png",
+github:"https://github.com/yourusername/localgit"
 }
 ]
-
 export default function Projects(){
 
 const ref = useRef(null)
@@ -48,7 +57,8 @@ const scrollLength = projects.length * 50// chjange this value as well
 return(
 
 <section className="projects-section">
-
+<h2 className="Project-header">
+My Projects</h2>
 <div
 className="projects-scroll"
 ref={ref}

@@ -94,9 +94,15 @@ position:absolute;
 top:0;
 left:0;
 
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
 background:var(--parchment-light);
 
-padding:20px 26px;
+padding:16px 20px;
 
 border-radius:12px;
 
@@ -132,3 +138,13 @@ color:var(--ink-40);
 display:none;
 
 }
+.system-icon{
+
+color:var(--ink-60);
+
+}
+.system-node:nth-child(1) svg{color:#3b82f6;}
+.system-node:nth-child(2) svg{color:#8b5cf6;}
+.system-node:nth-child(3) svg{color:#10b981;}
+.system-node:nth-child(4) svg{color:#f59e0b;}
+.system-node:nth-child(5) svg{color:#ef4444;}

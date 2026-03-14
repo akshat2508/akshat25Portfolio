@@ -7,6 +7,19 @@ height:300vh;
 position:relative;
 }
 
+.Project-header
+{
+    font-family:var(--font-display);
+
+font-size:60px;
+
+font-weight:800;
+
+letter-spacing:-0.03em;
+
+margin: auto;
+padding-left: 35%;
+}
 .projects-sticky{
 position:sticky;
 top:0;

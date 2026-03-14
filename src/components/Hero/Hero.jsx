@@ -25,6 +25,8 @@ const opacityText = useTransform(progress,[0,0.4],[0,1])
 const terminalX = useTransform(progress,[0,1],[200,0])
 const terminalScale = useTransform(progress,[0,1],[0.8,1])
 const terminalOpacity = useTransform(progress,[0,0.4],[0,1])
+const scrollHintOpacity = useTransform(scrollYProgress,[0,0.05],[1,0])
+const scrollHintY = useTransform(scrollYProgress,[0,0.05],[0,-20])
 
 return(
 
@@ -167,7 +169,16 @@ akshat@system
 </div>
 
 </div>
+<motion.div
+className="scroll-hint"
+style={{ opacity:scrollHintOpacity, y:scrollHintY }}
+>
 
+<span>Scroll to begin</span>
+
+<div className="scroll-wheel"/>
+
+</motion.div>
 </div>
 
 </div>

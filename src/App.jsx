@@ -7,6 +7,8 @@ import Projects from "./components/Projects/Projects"
 import SystemDesign from "./components/SystemDesign/SystemDesign"
 import Lab from "./components/Lab/Lab"
 import Footer from "./components/Footer/Footer"
+import Certificates from "./components/Certificates/Certificates"
+import Timeline from "./components/TimeLine/TimeLine"
 
 function App() {
 
@@ -25,6 +27,10 @@ function App() {
       <Projects />
 
       <SystemDesign />
+
+      <Certificates/>
+
+      <Timeline/>
 
       <Lab />
 
