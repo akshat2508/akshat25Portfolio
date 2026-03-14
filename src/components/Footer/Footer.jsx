@@ -5,7 +5,7 @@ export default function Footer(){
 
 return(
 
-<section className="footer">
+<section className="footer" id="contact">
 
 <motion.div
 className="footer-container"
@@ -40,7 +40,7 @@ interesting ideas, or engineering challenges.
 <div className="footer-buttons">
 
 <a
-href="https://github.com/"
+href="https://github.com/akshat2508"
 target="_blank"
 className="footer-btn"
 >
@@ -48,7 +48,7 @@ Github
 </a>
 
 <a
-href="https://linkedin.com/"
+href="https://www.linkedin.com/in/akshat-paul/"
 target="_blank"
 className="footer-btn"
 >
@@ -56,7 +56,7 @@ LinkedIn
 </a>
 
 <a
-href="mailto:youremail@email.com"
+href="mailto:akshatpaul2006@email.com"
 className="footer-btn primary"
 >
 Email Me

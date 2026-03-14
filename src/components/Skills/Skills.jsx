@@ -1,15 +1,31 @@
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import "./Skills.css"
+import {
+FaReact,
+FaNodeJs,
+FaCss3Alt,
+FaDatabase
+} from "react-icons/fa"
 
+import {
+SiJavascript,
+SiExpress,
+SiSupabase,
+SiFramer,
+SiTailwindcss,
+SiCplusplus,
+SiPostgresql,
+SiArduino
+} from "react-icons/si"
 const skills = [
 {
 title:"Backend Systems",
-tech:["Python","Flask","Supabase","REST APIs"]
+tech:["NodeJS","Express","Supabase","REST APIs"]
 },
 {
 title:"Frontend",
-tech:["React","JavaScript","Framer Motion","CSS"]
+tech:["React","JavaScript","Framer Motion","CSS" , "Tailwind"]
 },
 {
 title:"Systems",
@@ -28,7 +44,23 @@ title:"Hardware / Experiments",
 tech:["Arduino","Robotics","FPV Systems"]
 }
 ]
+const techIcons = {
+NodeJS: FaNodeJs,
+Express: SiExpress,
+Supabase: SiSupabase,
+"REST APIs": FaDatabase,
 
+React: FaReact,
+JavaScript: SiJavascript,
+"Framer Motion": SiFramer,
+CSS: FaCss3Alt,
+Tailwind: SiTailwindcss,
+
+"C++": SiCplusplus,
+PostgreSQL: SiPostgresql,
+
+Arduino: SiArduino
+}
 export default function Skills(){
 
 const ref = useRef(null)
@@ -63,7 +95,7 @@ const scale = useTransform(scrollYProgress,[0,1],[0.85,1])
 
 return(
 
-<section className="skills-section">
+<section className="skills-section" id="skills">
 
 <div className="skills-scroll" ref={ref}>
 
@@ -101,12 +133,21 @@ scale
 </h3>
 
 <div className="skill-tech">
+{skill.tech.map((t,i)=>{
 
-{skill.tech.map((t,i)=>(
+const Icon = techIcons[t]
+
+return(
 <span key={i} className="tech-pill">
+
+{Icon && <Icon className="tech-icon"/>}
+
 {t}
+
 </span>
-))}
+)
+
+})}
 
 </div>
 

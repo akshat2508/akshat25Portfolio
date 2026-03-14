@@ -151,3 +151,30 @@ font-family:var(--font-mono);
 color:var(--ink-70);
 
 }
+
+.tech-pill{
+
+background:var(--parchment-dark);
+
+padding:6px 10px;
+
+border-radius:6px;
+
+font-size:11px;
+
+font-family:var(--font-mono);
+
+color:var(--ink-70);
+
+display:flex;
+align-items:center;
+gap:6px;
+
+}
+
+.tech-icon{
+
+font-size:14px;
+opacity:0.8;
+
+}

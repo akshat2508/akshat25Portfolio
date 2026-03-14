@@ -1,9 +1,16 @@
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef, useState } from "react"
+import "./Lab.css"
+import cv from "../lab/cv.png"
+import fpv from "../lab/fpv.png"
+import riscv from "../lab/riscv.png"
+import linux from "../lab/linux.png"
+import os from "../lab/os.png"
 const experiments = [
-
 
 {
 title:"RISC-V Assembly Experiments",
-image:"/lab/riscv.jpg",
+image:riscv,
 desc:"Exploring instruction pipelines and low level architecture.",
 details:`
 • Assembly programs
@@ -15,7 +22,7 @@ details:`
 
 {
 title:"Linux Automation Scripts",
-image:"/lab/linux.jpg",
+image:linux,
 desc:"Shell scripts for system monitoring and automation.",
 details:`
 • Cron based automation
@@ -26,7 +33,7 @@ details:`
 
 {
 title:"Computer Vision Experiments",
-image:"/lab/cv.jpg",
+image:cv,
 desc:"CNN pipelines for image classification experiments.",
 details:`
 • CNN model testing
@@ -37,7 +44,7 @@ details:`
 
 {
 title:"System Simulations",
-image:"/lab/os.jpg",
+image:os,
 desc:"Deadlock simulation using Banker's Algorithm.",
 details:`
 • Resource allocation graph
@@ -47,7 +54,7 @@ details:`
 },
 {
 title:"FPV Drone Controller",
-image:"/lab/drone.jpg",
+image:fpv,
 desc:"Low-cost FPV drone control using Arduino + RF modules.",
 details:`
 • Arduino based flight controller
@@ -57,9 +64,6 @@ details:`
 `
 }
 ]
-import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef, useState } from "react"
-import "./Lab.css"
 
 export default function Lab(){
 
@@ -75,7 +79,7 @@ const x = useTransform(scrollYProgress,[0,1],["60%","-10%"])
 
 return(
 
-<section className="lab" ref={ref}>
+<section className="lab" id="lab" ref={ref}>
 
 <div className="lab-sticky">
 
@@ -131,18 +135,38 @@ onClick={()=>setActive(null)}
 
 <motion.div
 className="lab-modal-content"
-initial={{scale:0.9}}
-animate={{scale:1}}
+initial={{scale:0.9, opacity:0}}
+animate={{scale:1, opacity:1}}
+transition={{duration:0.3}}
 onClick={(e)=>e.stopPropagation()}
 >
 
-<h2>{active.title}</h2>
-
-<p>{active.details}</p>
-
-<button onClick={()=>setActive(null)}>
-Close
+<button
+className="lab-modal-close"
+onClick={()=>setActive(null)}
+>
+✕
 </button>
+
+<img
+src={active.image}
+alt={active.title}
+className="lab-modal-image"
+/>
+
+<h2 className="lab-modal-title">
+{active.title}
+</h2>
+
+<p className="lab-modal-desc">
+{active.desc}
+</p>
+
+<div className="lab-modal-details">
+{active.details.split("\n").map((line,i)=>(
+<p key={i}>{line}</p>
+))}
+</div>
 
 </motion.div>
 
