@@ -1,11 +1,11 @@
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef, useState } from "react"
 import "./Lab.css"
-import cv from "../lab/cv.png"
-import fpv from "../lab/fpv.png"
-import riscv from "../lab/riscv.png"
-import linux from "../lab/linux.png"
-import os from "../lab/os.png"
+import cv from "../Lab/cv.png"
+import fpv from "../Lab/fpv.png"
+import riscv from "../Lab/riscv.png"
+import linux from "../Lab/linux.png"
+import os from "../Lab/os.png"
 const experiments = [
 
 {
