@@ -1,3 +1,7 @@
+
+
+/* CERFITICATE */
+
 /* section background */
 
 .cert-section{
@@ -36,10 +40,10 @@ padding:0 40px;
 
 .cert-header{
 margin-bottom:60px;
-text-align: center;
+text-align:center;
 }
 
-/* tag (same as hero pill style but lighter) */
+/* tag */
 
 .cert-tag{
 
@@ -49,7 +53,7 @@ font-size:11px;
 
 letter-spacing:0.12em;
 
-color:var(--sage);
+color:var(--sage-light);
 
 display:block;
 
@@ -73,6 +77,8 @@ line-height:1;
 
 margin-bottom:20px;
 
+color:var(--ink);
+
 }
 
 /* description */
@@ -87,6 +93,8 @@ max-width:540px;
 
 line-height:1.6;
 
+margin:auto;
+
 }
 
 /* certificate grid */
@@ -100,7 +108,7 @@ grid-template-columns:repeat(4,1fr);
 gap:28px;
 
 margin-top:60px;
-margin-bottom: 40px;
+margin-bottom:40px;
 
 }
 
@@ -108,7 +116,7 @@ margin-bottom: 40px;
 
 .cert-card{
 
-background:white;
+background:var(--parchment-light);
 
 border-radius:16px;
 
@@ -120,13 +128,19 @@ cursor:pointer;
 
 transition:all 0.25s ease;
 
+box-shadow:
+0 15px 40px rgba(0,0,0,0.5),
+0 0 30px rgba(124,92,255,0.05);
+
 }
 
 .cert-card:hover{
 
 transform:translateY(-8px);
 
-box-shadow:0 20px 60px rgba(0,0,0,0.08);
+box-shadow:
+0 25px 70px rgba(0,0,0,0.7),
+0 0 50px rgba(124,92,255,0.08);
 
 }
 
@@ -162,6 +176,8 @@ font-weight:700;
 
 margin-bottom:6px;
 
+color:var(--ink);
+
 }
 
 /* issuer */
@@ -172,7 +188,7 @@ font-size:13px;
 
 font-family:var(--font-mono);
 
-color:var(--ink-50);
+color:var(--ink-40);
 
 letter-spacing:0.05em;
 
@@ -190,7 +206,9 @@ left:0;
 width:100%;
 height:100%;
 
-background:rgba(0,0,0,0.6);
+background:rgba(5,6,10,0.75);
+
+backdrop-filter:blur(6px);
 
 display:flex;
 
@@ -206,7 +224,7 @@ z-index:100;
 
 .cert-modal-content{
 
-background:white;
+background:var(--parchment-light);
 
 border-radius:20px;
 
@@ -216,7 +234,11 @@ max-width:720px;
 
 width:90%;
 
-box-shadow:0 30px 100px rgba(0,0,0,0.25);
+border:1px solid var(--border);
+
+box-shadow:
+0 40px 120px rgba(0,0,0,0.7),
+0 0 60px rgba(0,229,255,0.05);
 
 text-align:center;
 
@@ -246,6 +268,8 @@ font-weight:800;
 
 margin-bottom:10px;
 
+color:var(--ink);
+
 }
 
 /* issuer */
@@ -256,7 +280,7 @@ font-family:var(--font-mono);
 
 font-size:13px;
 
-color:var(--ink-60);
+color:var(--ink-40);
 
 margin-bottom:20px;
 
@@ -280,4 +304,17 @@ font-weight:600;
 
 text-decoration:none;
 
+box-shadow:0 6px 25px rgba(124,92,255,0.35);
+
+transition:all .25s ease;
+
 }
+
+.cert-modal-content a:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 10px 40px rgba(124,92,255,0.45);
+
+}
+

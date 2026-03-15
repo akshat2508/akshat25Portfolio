@@ -1,3 +1,7 @@
+
+
+/* //GLOABLSCSS */
+
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400&display=swap');
 
 @import "./variables.css";
@@ -11,10 +15,17 @@
 html{
   scroll-behavior:smooth;
 }
-
 body{
   font-family: var(--font-body);
   background: var(--parchment);
   color: var(--ink);
   overflow-x:hidden;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+  background-size: 40px 40px;
 }
+
+

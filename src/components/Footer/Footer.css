@@ -1,18 +1,25 @@
+
+
+/* //FOOTER */
 .footer{
 
-background:var(--ink);
+background:var(--parchment-dark);
 
 padding:140px 0;
 
 text-align:center;
 
-color:white;
+color:var(--ink);
 
 position:relative;
 
 overflow:hidden;
 
+border-top:1px solid var(--border);
+
 }
+
+/* container */
 
 .footer-container{
 
@@ -23,6 +30,8 @@ margin:auto;
 padding:0 40px;
 
 }
+
+/* tag */
 
 .footer-tag{
 
@@ -40,6 +49,8 @@ margin-bottom:24px;
 
 }
 
+/* title */
+
 .footer-title{
 
 font-family:var(--font-display);
@@ -54,6 +65,8 @@ letter-spacing:-0.03em;
 
 margin-bottom:20px;
 
+color:var(--ink);
+
 }
 
 .footer-title .accent{
@@ -62,17 +75,21 @@ color:var(--gold);
 
 }
 
+/* description */
+
 .footer-desc{
 
 font-size:17px;
 
 line-height:1.6;
 
-color:rgba(255,255,255,0.6);
+color:var(--ink-70);
 
 margin-bottom:40px;
 
 }
+
+/* buttons */
 
 .footer-buttons{
 
@@ -86,31 +103,39 @@ flex-wrap:wrap;
 
 }
 
+/* default button */
+
 .footer-btn{
 
 padding:14px 26px;
 
 border-radius:12px;
 
-background:#333;
+background:rgba(255,255,255,0.05);
 
-color:white;
+color:var(--ink);
 
 text-decoration:none;
 
 font-weight:600;
 
-transition:all 0.2s ease;
+border:1px solid var(--border);
+
+transition:all .25s ease;
 
 }
+
+/* hover */
 
 .footer-btn:hover{
 
 transform:translateY(-2px);
 
-background:#444;
+background:rgba(255,255,255,0.08);
 
 }
+
+/* primary button */
 
 .footer-btn.primary{
 
@@ -118,12 +143,18 @@ background:var(--gold);
 
 color:var(--ink);
 
+box-shadow:0 6px 25px rgba(0,229,255,0.35);
+
 }
+
+/* primary hover */
 
 .footer-btn.primary:hover{
 
 background:var(--sage);
 
 color:white;
+
+box-shadow:0 10px 40px rgba(124,92,255,0.45);
 
 }

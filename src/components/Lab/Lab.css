@@ -1,3 +1,6 @@
+
+/* //LABS */
+
 .lab{
 
 height:220vh;
@@ -5,6 +8,8 @@ height:220vh;
 background:var(--parchment-light);
 
 }
+
+/* sticky stage */
 
 .lab-sticky{
 
@@ -33,10 +38,11 @@ padding:0 40px;
 
 }
 
-.lab-header{
-text-align: center;
-margin-bottom:60px;
+/* header */
 
+.lab-header{
+text-align:center;
+margin-bottom:60px;
 }
 
 .lab-tag{
@@ -65,7 +71,11 @@ font-weight:800;
 
 letter-spacing:-0.03em;
 
+color:var(--ink);
+
 }
+
+/* grid */
 
 .lab-grid{
 
@@ -77,16 +87,43 @@ gap:28px;
 
 }
 
+/* card */
+
 .lab-card{
 
-    width: 271px;
-    background: white;
-    border-radius: 14px;
-    padding: 16px;
-    border: 1px solid var(--border);
-    cursor: pointer;
-    height: 309px;
+width:271px;
+
+background:var(--parchment);
+
+border-radius:14px;
+
+padding:16px;
+
+border:1px solid var(--border);
+
+cursor:pointer;
+
+height:309px;
+
+transition:all .25s ease;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,0.5),
+0 0 30px rgba(77,163,255,0.05);
+
 }
+
+.lab-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+0 25px 70px rgba(0,0,0,0.6),
+0 0 40px rgba(77,163,255,0.08);
+
+}
+
+/* image */
 
 .lab-card img{
 
@@ -102,14 +139,6 @@ margin-bottom:12px;
 
 }
 
-.lab-card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 20px 50px rgba(0,0,0,0.08);
-
-}
-
 .lab-image{
 
 height:180px;
@@ -121,12 +150,13 @@ overflow:hidden;
 .lab-image img{
 
 width:100%;
-
 height:100%;
 
 object-fit:cover;
 
 }
+
+/* card title */
 
 .lab-card-title{
 
@@ -138,7 +168,11 @@ font-weight:700;
 
 margin-bottom:14px;
 
+color:var(--ink);
+
 }
+
+/* description */
 
 .lab-card-desc{
 
@@ -150,11 +184,15 @@ color:var(--ink-70);
 
 }
 
+/* content */
+
 .lab-content{
 
 padding:24px;
 
 }
+
+/* tech stack */
 
 .lab-stack{
 
@@ -174,13 +212,19 @@ font-size:11px;
 
 padding:4px 8px;
 
-background:var(--parchment);
+background:rgba(255,255,255,0.04);
 
 border-radius:6px;
 
 font-family:var(--font-mono);
 
+border:1px solid var(--border);
+
+color:var(--ink-70);
+
 }
+
+/* horizontal scroll track */
 
 .lab-track{
 
@@ -191,38 +235,6 @@ gap:30px;
 padding:40px;
 
 width:max-content;
-
-}
-
-.lab-modal{
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,0.5);
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-}
-
-.lab-modal-content{
-
-background:white;
-
-padding:40px;
-
-border-radius:16px;
-
-max-width:600px;
 
 }
 
@@ -238,7 +250,7 @@ left:0;
 width:100%;
 height:100%;
 
-background:rgba(0,0,0,0.45);
+background:rgba(5,6,10,0.75);
 
 display:flex;
 
@@ -256,7 +268,7 @@ backdrop-filter:blur(6px);
 
 .lab-modal-content{
 
-background:white;
+background:var(--parchment);
 
 padding:36px;
 
@@ -266,8 +278,11 @@ max-width:640px;
 
 width:90%;
 
+border:1px solid var(--border);
+
 box-shadow:
-0 40px 80px rgba(0,0,0,0.15);
+0 40px 120px rgba(0,0,0,0.7),
+0 0 60px rgba(77,163,255,0.05);
 
 position:relative;
 
@@ -283,7 +298,7 @@ width:100%;
 
 height:220px;
 
-object-fit:fill;
+object-fit:cover;
 
 border-radius:12px;
 
@@ -301,9 +316,11 @@ font-size:28px;
 
 margin-bottom:10px;
 
+color:var(--ink);
+
 }
 
-/* short desc */
+/* description */
 
 .lab-modal-desc{
 
@@ -317,7 +334,7 @@ line-height:1.6;
 
 }
 
-/* bullet details */
+/* details */
 
 .lab-modal-details{
 
@@ -352,11 +369,11 @@ font-size:20px;
 
 cursor:pointer;
 
-color:var(--ink-60);
+color:var(--ink-40);
 
 }
 
-/* pop animation */
+/* modal animation */
 
 @keyframes modalPop{
 

@@ -1,23 +1,28 @@
+
+
+
+/* //VRAIABLES.CSS */
+
 :root {
 
-  --parchment: #F5F0E8;
-  --parchment-light: #FAF7F0;
-  --parchment-dark: #EDE6D6;
+  --parchment: #0B0D12;
+  --parchment-light: #11141C;
+  --parchment-dark: #06070A;
 
-  --gold: #FEC345;
-  --gold-dark: #DF9A06;
+  --gold: #00E5FF;
+  --gold-dark: #00B8D4;
 
-  --sage: #8BAF29;
-  --sage-light: #C4CD4E;
+  --sage: #7C5CFF;
+  --sage-light: #A98BFF;
 
-  --coral: #E57373;
-  --blue: #BACDED;
+  --coral: #FF4D6D;
+  --blue: #4DA3FF;
 
-  --ink: #201D1E;
-  --ink-70: rgba(32,29,30,0.7);
-  --ink-40: rgba(32,29,30,0.4);
+  --ink: #E6EDF3;
+  --ink-70: rgba(230,237,243,0.7);
+  --ink-40: rgba(230,237,243,0.4);
 
-  --border: rgba(32,29,30,0.10);
+  --border: rgba(255,255,255,0.08);
 
   --font-display: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
