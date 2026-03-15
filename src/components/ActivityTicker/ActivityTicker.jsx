@@ -8,7 +8,7 @@ const activities = [
 "📦 Shipping Docuvio v2",
 "🧠 Learning RISC-V assembly",
 "🔧 Building FPV drone controller",
-"💻 Optimizing Supabase queries",
+"💻 Optimizing SQL queries",
 "🚀 Designing system architecture",
 "📊 Running algorithm benchmarks",
 

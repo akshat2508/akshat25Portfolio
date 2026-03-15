@@ -11,7 +11,7 @@ const projects = [
 {
 title:"Docuvio",
 desc:"Campus printing marketplace connecting students with local print shops for fast document printing and order tracking.",
-tech:["React","Supabase","Flask"],
+tech:["React","PostgreSQL","Nodejs", "Framer motion", "CronJobs","Resend"],
 image:docuvio,
 github:"https://github.com/akshat2508/Lovely_Prints",
 live:"https://docuvio.co.in"
@@ -20,7 +20,7 @@ live:"https://docuvio.co.in"
 {
 title:"Pi Pascals LMS",
 desc:"Learning management system for managing courses, assignments and student submissions with real-time dashboards.",
-tech:["React","Node","Supabase"],
+tech:["Angular","Node","PostgreSQL","CronJobs"],
 image: lmsImg,
 github:"https://github.com/akshat2508/pascals-institute",
 live:"https://www.pascalsinstitute.com/admin-dashboard"
@@ -29,7 +29,7 @@ live:"https://www.pascalsinstitute.com/admin-dashboard"
 {
 title:"AnonTalk",
 desc:"Anonymous real-time chat platform where users can communicate without accounts using temporary identities.",
-tech:["React","WebSockets","Node"],
+tech:["React","WebSockets","Node","CronJobs"],
 image:anontalkImg,
 github:"https://github.com/akshat2508/AnonTalk",
 live:"https://anon-talk-web.vercel.app/"
@@ -38,10 +38,19 @@ live:"https://anon-talk-web.vercel.app/"
 {
 title:"MyGit",
 desc:"A lightweight local version control system inspired by Git, built to understand internal VCS mechanics and commit trees.",
-tech:["C++","CLI","Systems"],
+tech:["C++","CLI","Systems","MakeFile"],
 image:mygitImg,
 github:"https://github.com/akshat2508/MY-GIT"
-}
+},
+{
+title:"DingDingGO — Multiplayer Hub",
+desc:"Socket.io powered mini-games with matchmaking & lobbies.",
+tech:["React","Socket.io","Realtime","PostgreSQL"],
+image:dingImg,
+github:"https://github.com/akshat2508/DingDingGo",
+live:"https://dingdinggo.vercel.app/"
+},
+
 ]
 export default function Projects(){
 
@@ -54,10 +63,10 @@ target: ref
 const x = useTransform(
 scrollYProgress,
 [0,1],
-["0%", `-${(projects.length - 1) * 50}%`]//chane the value after * to controlhoriuzontal length of the scroll 
+["0%", `-${(projects.length - 1) * 20}%`]//chane the value after * to controlhoriuzontal length of the scroll 
 )
 
-const scrollLength = projects.length * 50// chjange this value as well 
+const scrollLength = projects.length * 50
 
 return(
 
