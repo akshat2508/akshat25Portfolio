@@ -1,16 +1,45 @@
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion"
 import { useRef } from "react"
 import "./Hero.css"
 
 export default function Hero(){
 
 const ref = useRef(null)
+const rotateX = useMotionValue(0)
+const rotateY = useMotionValue(0)
+
+const smoothRotateX = useSpring(rotateX, { stiffness: 120, damping: 20 })
+const smoothRotateY = useSpring(rotateY, { stiffness: 120, damping: 20 })
 
 const { scrollYProgress } = useScroll({
   target: ref,
   offset: ["start start","end end"]
 })
 
+function handleMouseMove(e) {
+
+const rect = e.currentTarget.getBoundingClientRect()
+
+const x = e.clientX - rect.left
+const y = e.clientY - rect.top
+
+const centerX = rect.width / 2
+const centerY = rect.height / 2
+
+const rotateXValue = -(y - centerY) / 20
+const rotateYValue = (x - centerX) / 20
+
+rotateX.set(rotateXValue)
+rotateY.set(rotateYValue)
+
+}
+
+function handleMouseLeave() {
+
+rotateX.set(0)
+rotateY.set(0)
+
+}
 /* finish animation earlier */
 
 const progress = useTransform(scrollYProgress,[0,0.6],[0,1])
@@ -135,10 +164,15 @@ className="terminal"
 style={{
 x:terminalX,
 scale:terminalScale,
-opacity:terminalOpacity
+opacity:terminalOpacity,
+rotateX: smoothRotateX,
+rotateY: smoothRotateY,
+transformPerspective: 1000
 }}
+onMouseMove={handleMouseMove}
+onMouseLeave={handleMouseLeave}
 >
-
+  
 <div className="terminal-header">
 
 <span className="dot red"/>

@@ -17,11 +17,61 @@ worker: Cpu,
 notify: Bell
 }
 const nodes = [
-{ name:"Frontend", icon:"frontend" },
-{ name:"API Server", icon:"api" },
-{ name:"Database", icon:"db" },
-{ name:"Worker Queue", icon:"worker" },
-{ name:"Notifications", icon:"notify" }
+{
+name:"Frontend",
+icon:"frontend",
+tech:"React / Next.js",
+details:[
+"UI rendering",
+"API requests",
+"Component state",
+"CDN cached assets"
+]
+},
+{
+name:"API Server",
+icon:"api",
+tech:"Node.js / Express",
+details:[
+"Authentication",
+"Validation",
+"Rate limiting",
+"REST endpoints"
+]
+},
+{
+name:"Database",
+icon:"db",
+tech:"PostgreSQL",
+details:[
+"Indexed queries",
+"Transactions",
+"Relational integrity",
+"Query optimization"
+]
+},
+{
+name:"Worker Queue",
+icon:"worker",
+tech:"Redis / BullMQ",
+details:[
+"Email jobs",
+"Image processing",
+"Payment tasks",
+"Async workflows"
+]
+},
+{
+name:"Notifications",
+icon:"notify",
+tech:"WebSockets / Email",
+details:[
+"Push notifications",
+"Email alerts",
+"Webhook triggers",
+"Event streams"
+]
+}
 ]
 
 export default function SystemDesign(){
@@ -134,19 +184,35 @@ scrollYProgress,
 )
 
 return(
-
 <motion.div
 className="system-node"
 key={index}
 style={{x,opacity}}
 >
 
+<div className="node-top">
+
 <Icon size={18} className="system-icon"/>
 
-<span>{node.name}</span>
+<div>
+
+<span className="node-title">{node.name}</span>
+
+<span className="node-tech">{node.tech}</span>
+
+</div>
+
+</div>
+
+<ul className="node-details">
+
+{node.details.map((d,i)=>(
+<li key={i}>{d}</li>
+))}
+
+</ul>
 
 </motion.div>
-
 )
 
 })}

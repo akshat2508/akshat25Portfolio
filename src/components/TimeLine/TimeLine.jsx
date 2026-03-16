@@ -2,26 +2,25 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 import "./Timeline.css"
 
+
 const experience = [
 {
 title:"Full Stack Developer",
 org:"PI Pascals Institute",
 date:"Aug 2025 – Feb 2026",
-desc:"Built and scaled LMS supporting 5000+ users with dashboards, scheduling and optimized database queries."
-},
+desc:"Designed and built a scalable Learning Management System used by 5000+ students and instructors. Developed analytics dashboards, scheduling workflows and role-based access systems. Optimized database queries and backend APIs reducing response times by ~35%. Stack: Angular, Node.js, PostgreSQL, AWS."},
 {
 title:"Full Stack Developer Intern",
 org:"PI Pascals Institute",
 date:"Jul 2025 – Aug 2025",
-desc:"Developed onboarding flows, course modules and REST APIs using Angular and Tailwind."
-},
+desc:"Engineered onboarding flows and modular course management features for a production LMS platform. Built responsive UI components using Angular and Tailwind and implemented REST APIs for enrollment, progress tracking and content delivery."},
 {
 title:"Mobile Developer Intern",
 org:"StudyGyaan – Appsycle",
 date:"Sept 2024 – Oct 2024",
-desc:"Built reusable Flutter widgets and improved UI performance and engagement."
-}
+desc:"Built modular Flutter UI components and optimized rendering performance for an education mobile app. Implemented reusable widget systems and improved navigation flow to enhance user engagement and reduce UI latency."}
 ]
+
 
 const education = [
 {
