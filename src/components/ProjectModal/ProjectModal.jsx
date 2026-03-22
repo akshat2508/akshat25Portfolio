@@ -71,6 +71,20 @@ transition={{ duration:0.25 }}
 {project.desc}
 </p>
 
+<div className="modal-features">
+
+  <h4>Key Features</h4>
+
+  <ul>
+    {project.features.map((f, i) => (
+      <li key={i}>{f}</li>
+    ))}
+  </ul>
+
+</div>
+
+
+
 <div className="modal-tech">
 
 {project.tech.map((t,i)=>(
@@ -106,6 +120,7 @@ Github
 </div>
 
 </div>
+
 
 </motion.div>
 

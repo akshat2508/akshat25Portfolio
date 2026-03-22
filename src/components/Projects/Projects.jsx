@@ -22,6 +22,14 @@ screenshots:[
 "/shots/docuvio/3.png",
 "/shots/docuvio/4.png"
 ],
+features: [
+  "Smart shop selection based on user location",
+  "Estimated waiting time before printing",
+  "Next-day pickup scheduling with time slots",
+  "Multiple print shop support with independent queues",
+  "Email notifications for order confirmation and updates",
+  "Secure file upload and document handling"
+],
 
 github:"https://github.com/akshat2508/Lovely_Prints",
 live:"https://docuvio.co.in"
@@ -38,6 +46,14 @@ screenshots:[
 "/shots/pi/3.png",
 "/shots/pi/4.png"
 ],
+features: [
+  "Role-based access control for admins, instructors, and students",
+  "Course creation and management with structured modules and lessons",
+  "Real-time dashboards for student performance and course analytics",
+  "Cron-based scheduling for assignment deadlines and reminders",
+  "Centralized student data management with secure storage",
+  "Instructor tools for monitoring submissions and engagement"
+],
 github:"https://github.com/akshat2508/pascals-institute",
 live:"https://www.pascalsinstitute.com/admin-dashboard"
 },
@@ -52,6 +68,14 @@ screenshots:[
 "/shots/anontalk/2.png",
 "/shots/anontalk/3.png",
 "/shots/anontalk/4.png"
+],
+features: [
+  "Anonymous chat without account creation using temporary identities",
+  "Real-time messaging powered by WebSockets for instant communication",
+  "Ephemeral sessions with automatic cleanup using cron jobs",
+  "Random user matching for spontaneous conversations",
+  "Session-based isolation to ensure user privacy",
+  "Automatic disconnection handling and reconnection logic",
 ],
 github:"https://github.com/akshat2508/AnonTalk",
 live:"https://anon-talk-web.vercel.app/"
@@ -68,6 +92,14 @@ screenshots:[
 "/shots/mygit/3.png",
 "/shots/mygit/4.png"
 ],
+features: [
+  "Custom implementation of core version control operations (init, add, commit, log)",
+  "Snapshot-based commit system with file tracking",
+  "Commit history management using tree-like structures",
+  "CLI-based interface mimicking real Git commands",
+  "Diff tracking to identify changes between file versions",
+  "Built using low-level C++ for understanding system-level file operations"
+],
 github:"https://github.com/akshat2508/MY-GIT"
 },
 {
@@ -80,6 +112,14 @@ screenshots:[
 "/shots/dingding/2.png",
 "/shots/dingding/3.png",
 "/shots/dingding/4.png"
+],
+features: [
+  "Real-time multiplayer games powered by Socket.io",
+  "Lobby system for creating and joining game rooms",
+  "Matchmaking logic to pair players dynamically",
+  "Live game state synchronization across all connected players",
+  "Session management for handling player connections and disconnections",
+  "Persistent data storage using PostgreSQL for game sessions and stats"
 ],
 github:"https://github.com/akshat2508/DingDingGo",
 live:"https://dingdinggo.vercel.app/"

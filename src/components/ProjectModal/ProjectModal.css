@@ -22,7 +22,7 @@ z-index:1000;
 .modal-container{
 
 width:85vw;
-height:65vh;
+height:70vh;
 
 background:var(--parchment-light);
 
@@ -211,4 +211,27 @@ color:var(--ink);
 
 transform:translateY(-2px);
 
+}
+
+.modal-features {
+  margin-top: 16px;
+}
+
+.modal-features h4 {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--ink-50);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.modal-features ul {
+  padding-left: 18px;
+}
+
+.modal-features li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--ink-80);
+  line-height: 1.5;
 }
