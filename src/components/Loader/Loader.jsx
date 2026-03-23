@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useEffect, useState } from "react"
-import "./Loader.css"
+import "./loader.css"
 
 const commands = [
   { type: "command", text: "boot_sequence --init" },
