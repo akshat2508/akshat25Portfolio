@@ -9,32 +9,31 @@ import Lab from "./components/Lab/Lab"
 import Footer from "./components/Footer/Footer"
 import Certificates from "./components/Certificates/Certificates"
 import Timeline from "./components/TimeLine/TimeLine"
-
+import { useState } from "react"
+import Loader from "./components/Loader/Loader"
 function App() {
 
+    const [loading, setLoading] = useState(true)
+
   return (
-    <>
-      <Navbar />
+     <>
+      {loading && <Loader onFinish={() => setLoading(false)} />}
 
-      <Hero />
-
-      <ActivityTicker />
-
-      <About />
-
-      <Skills />
-
-      <Projects />
-
-      <SystemDesign />
-
-      <Certificates/>
-
-      <Timeline/>
-
-      <Lab />
-
-      <Footer />
+      {!loading && (
+        <>
+          <Navbar />
+          <Hero />
+          <ActivityTicker />
+          <About />
+          <Skills />
+          <Projects />
+          <SystemDesign />
+          <Certificates />
+          <Timeline />
+          <Lab />
+          <Footer />
+        </>
+      )}
     </>
   )
 }
